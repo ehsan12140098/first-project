@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'B Lotus';
+    src: url('BLotusBold.eot');
+    src: url('BLotusBold.eot?#iefix') format('embedded-opentype'),
+        url('BLotusBold.woff2') format('woff2'),
+        url('BLotusBold.woff') format('woff'),
+        url('BLotusBold.ttf') format('truetype'),
+        url('BLotusBold.svg#BLotusBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

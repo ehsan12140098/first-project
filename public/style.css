@@ -1,0 +1,539 @@
+@font-face {
+  font-family: Blotos;
+  src: url('Blotos/BLotusBold.eot');
+  src: url('Blotos/BLotusBold.eot?#iefix') format('embedded-opentype'),
+      url('Blotos/BLotusBold.woff2') format('woff2'),
+      url('Blotos/BLotusBold.woff') format('woff'),
+      url('Blotos/BLotusBold.ttf') format('truetype'),
+      url('Blotos/BLotusBold.svg#BLotusBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1{
+  margin: 15px;
+}
+
+h2{
+  margin: 12px;
+}
+h3{
+  margin: 10px;
+}
+h4{
+  margin: 8px;
+}
+h5{
+  margin: 6px;
+}
+
+/*
+
+top-menu-css
+
+*/
+
+  #top-menu{
+    background-color:  #ffffff;
+    width: 100%;
+    height: 70px;
+    position: sticky;
+    top: 0px;
+
+    box-shadow: 0px 3px 3px rgb(128, 129, 126);
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    color:  black;
+    align-items: center;
+  }
+  
+  #basketicon-reg{
+    display: flex;
+    align-items: center;
+    width: 250px;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+  #reg >:link{
+    text-decoration: none;
+    
+  }
+  #basketicon > span{
+    transform:translateX(20px) translateY(-30px);
+    display: inline-block;
+    color:rgb(16, 6, 6);
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 20px;
+  }
+  #srech-sidebaricon{
+    display:flex ;
+    align-items: center;
+   width: 250px;
+    margin-right: 20px;
+    justify-content: space-between;
+
+  }
+
+  #serchtext{
+    border: 0ch;
+    
+    margin-right: 5px;
+    font-size: 15px;
+    direction: rtl;
+    background-color:  rgba(179, 186, 184, 0);
+
+  }
+  
+  .icon{
+    color: rgb(18, 2, 2);
+    margin-top: 5px;
+  }
+  .icon:hover{
+    color: red;
+  }
+  #serch{
+    border: 2px solid rgb(161, 155, 155);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color:  rgba(179, 186, 184, 0.129);
+
+  }
+  #serchprodoc{
+    position: absolute;
+    background-color: #ffffff;
+    right: 0px;
+    left: 0px;
+    max-height: 200px;
+    overflow: scroll;
+    top: 32.6px;
+    border: 2px solid rgb(161, 155, 155);
+    border-radius: 8px;
+    direction: ltr;
+    display: none;
+    text-align: right;
+    
+    
+  }
+  #serchprodoc>ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  #serchprodoc>ul>li{
+    background-color: rgb(239, 242, 242);
+    padding-right: 8px;
+
+  }
+  #serchprodoc>ul>li:not(:last-child){
+    border-bottom: 1px solid rgb(161, 155, 155);
+
+  }
+  #serchprodoc>ul>li:hover{
+    background-color: rgb(182, 213, 213);
+    cursor: pointer;
+  }
+  #reg>a:hover{
+    color: red;
+  }
+
+  #reg>a{
+    color: #000;
+  }
+  .sidebaricon:hover{
+    color: red;
+  }
+  #leftlogin:hover{
+    color: red;
+
+  }
+  /*
+
+
+Footer
+
+
+  */
+
+  #footer{
+    background-color:  #ffffff ;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0px -3px 0px rgb(128, 129, 126);
+
+    direction: rtl;
+    display: flex;
+    color:black;
+    justify-content: space-between;
+   
+    padding-top: 20px;
+  }
+  #acess{
+  margin-right: 50px;
+  
+  }
+  #map{
+    margin-left: 50px;
+  }
+  
+  /*
+
+  Sidebar
+
+
+  */
+  #sidebar{
+    width: 300px;
+    height: 800px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 99;
+    background-color: #f6f6f6;
+    border-left:2px solid  rgb(161, 155, 155);
+
+    font-weight: 700;
+    font-size: 25px;
+    display: block;
+    
+  }
+  #sidebarlist{
+    list-style:none;
+    direction: rtl;
+    margin: 0px;
+    padding-right: 0%;    
+  }
+
+  #sidebarlist :link{
+    text-decoration: none;
+    color: #000;
+    padding: 20px;
+    
+    display: inline-block;
+    cursor: pointer;
+    margin: 0px;
+    width: calc(100% - 40px);
+
+  }
+  
+  #sidebarlist :not(:last-child) {
+    /* استایل دلخواه */
+    border-bottom: 2px solid  rgb(161, 155, 155);
+    transition-duration: 0.3s;
+}
+#sidebarlist > li:hover {
+  background-color: rgb(182, 213, 213);
+}
+#keshtlist{
+  display:none;
+  
+}
+#keshtlist{
+
+  background-color: #f6f6f6;
+
+}
+.keshtlists:hover{
+  background-color: rgb(182, 213, 213);
+}
+
+
+/*
+
+
+Prodoct
+
+*/
+
+#productcontainer:hover{
+  box-shadow: 7px 7px 7px rgb(161, 155, 155);
+
+}
+#productcontainer{
+  display: flex;
+  flex-direction: column;
+  border: 3px solid rgb(161, 155, 155);
+
+  width: 300px;
+  height: 450px;
+  margin: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgb(0, 255, 136);
+}
+#productbuyitem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#productbuybutton{
+  font-size: 20px;
+  width: 60px;
+  cursor: pointer;
+}
+#productbuybutton:hover{
+  transform: scale(1.2);
+
+}
+#productbuynumber{
+  text-align: center;
+  font-size: 20px;
+  width: 60px;
+}
+.productbuym{
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  width: 30px; ;
+
+}
+#productbuynum{
+  margin-left: 70px;
+  border-radius: 40%;
+}
+
+#productimg:hover{
+  transform: scale(1.5);
+
+}
+#productimg{
+  
+  border-radius: 10px;
+}
+
+/*
+
+products
+
+*/
+#products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+/*
+
+Basket
+*/
+
+#listkharid{
+  display: flex;
+  width: 900px;
+  height: 150px;
+  border: 3px solid rgb(161, 155, 155);
+  border-radius: 10px;
+  margin-bottom: 50px;
+  background-color:  rgb(0, 255, 136);
+
+  align-items: center;
+  justify-content: center;
+
+}
+.basketbakhsh{
+  margin-right: 30px;
+}
+
+/*
+
+Basketitems
+
+*/
+
+.buys{
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#pricecontaners{
+  display: flex;
+  flex-direction: column;
+  background-color:  rgb(0, 255, 136);
+  width: 900px;
+  border: 3px solid rgb(161, 155, 155);
+  margin-bottom: 50px;
+  align-items: center;
+  height: 200px;
+  justify-content: center;
+  border-radius: 10px;
+
+}
+#pricecontaner{
+  display: flex;
+  align-items: center;
+}
+.pricecontaner{
+  margin-right: 25px;
+}
+#buybottom{
+  margin-right:25px;
+  cursor:pointer;
+  border-radius:10px;
+  border: 2px solid rgb(161, 155, 155);
+ width: 90px;
+  background-color: buttonface;
+  height: 50px;
+  
+  display: inline-block;
+text-align: center;
+}
+#buybottom:hover{
+background-color: rgb(207, 204, 204);
+}
+
+
+
+
+/*
+
+signup
+
+
+*/
+
+
+
+#signupcontainer{
+  direction: rtl;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  border: 3px solid rgb(161, 155, 155);
+  width: 500px;
+  padding: 60px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background-color: rgb(234, 233, 233);
+  
+}
+#signuptittel{
+  text-align: center;
+  font-size: 50px;
+  padding-top: 0%;
+  margin-top: 0%;
+}
+.contains{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 5px;
+}
+.containss{
+  
+  font-size: 20px;
+  padding: 5px;
+}
+.gender{
+  display: flex;
+  align-items: center;
+
+}
+.signupinput{
+  font-size: 16px;
+  width: 200px;
+  height: 30px;
+  color: #494949;
+}
+.signuplabel{
+  display: block;
+}
+.error{
+  font-size: 12px;
+  color:red;
+}
+
+#signupbutton{
+transform: translateX(-416px);
+margin-top: 30px;
+width: 80px;
+height: 40px;
+border-radius: 6px;
+font-size: 20px;
+border: 2px solid rgb(161, 155, 155);
+background-color: rgb(255, 251, 251);
+cursor: pointer;
+
+}
+
+#signupbutton:hover{
+  background-color: darkgray;
+  color: #ffffff;
+}
+
+
+/*
+
+Login
+
+
+
+*/
+#logintitle{
+  font-size: 50px;
+  padding-top: 0%;
+  margin-top: 0px;
+  text-align: center;
+  margin-bottom: 0%;
+}
+#logincontainer{
+  direction: rtl;
+  margin-top: 60px;
+  margin-bottom: 5px;
+  border: 3px solid rgb(161, 155, 155);
+  width: 300px;
+  padding: 60px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background-color: rgb(234, 233, 233);
+  font-size: 20px;
+  
+}
+.loginlabel{
+  display: block;
+
+
+}
+
+.logininput{
+  font-size: 16px;
+  width: 200px;
+  height: 30px;
+  color: #494949;
+}
+
+#loginbutton{
+  transform: translateX(-250px);
+  margin-top: 30px;
+  width: 80px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 20px;
+  border: 2px solid rgb(161, 155, 155);
+  background-color: rgb(255, 251, 251);
+  cursor: pointer;
+  
+  }
+  
+  #loginbutton:hover{
+    background-color: darkgray;
+    color: #ffffff;
+  }
+  #login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    
+  }

@@ -6,7 +6,7 @@ import { Text } from "./Text";
 import Topmenu from './top-menu';
 import Footer from './footer';
 import { mahsolat } from './mahsolat';
-import { BrowserRouter as Router, Route, Routes , link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes , link , Navigate} from 'react-router-dom';
 import Sidebar from './sidebar';
 import Prodocts from './Prodocts';
 import Basketitems from './Basketitems';
@@ -33,7 +33,8 @@ const Ap=()=>{
           <Route path='Productserched/:num' element={<Prodoctserched />}/>
           <Route path='Signup' element={<Signup/>} />
           <Route path='Login' element={ <Login/>} />
-
+          {/* روت پیش‌فرض (زمانی که هیچ روتی وارد نشد یا اشتباه بود) */}
+          <Route path="*" element={<Navigate to="/Product" />} />
           
         </Routes>
 

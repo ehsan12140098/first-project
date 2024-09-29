@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faSearch, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { Link, useLoaderData } from "react-router-dom";
 import { Text } from "./Text";
+import { click } from "@testing-library/user-event/dist/click";
 
 const Topmenu = ({ setOpenclosesidebar }) => {
     const [searchProduct, setSearchProduct] = useState([]);
@@ -30,12 +31,21 @@ const Topmenu = ({ setOpenclosesidebar }) => {
 
     // استفاده از useEffect برای افزودن و حذف کردن event listener
     useEffect(() => {
+        // افزودن event listener
+        document.addEventListener("click", handleClickOutside);
+
+        // بارگذاری داده‌ها از localStorage
         const userDataString = localStorage.getItem("Userdatas");
         if (userDataString) {
             const userData2 = JSON.parse(userDataString);
             setUserdatas(userData2);  // اینجا داده‌های ذخیره‌شده را در استیت ذخیره می‌کنید
         }
-    }, []);
+
+        // حذف event listener هنگام خروج از کامپوننت
+        return () => {
+            document.removeEventListener("click", handleClickOutside);
+        };
+    }, []);  // اجرا فقط یک بار هنگام mount شدن کامپوننت
     
     console.log(userdatas)
     return (

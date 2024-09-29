@@ -28,8 +28,26 @@ h5{
   margin: 6px;
 }
 
-/*
 
+
+
+ #inastagramlink {
+  position: fixed;
+  left: 5px;
+  top: 50%;
+  background-color:  rgba(179, 186, 184, 0.268);
+ border-radius: 5px;
+width: 60px;
+height: 60px;
+background-image: url(/image/InstagramLogo.jpg);
+background-position: center center;
+background-size: cover;
+background-repeat: no-repeat;
+
+
+ }
+
+/*
 top-menu-css
 
 */
@@ -250,21 +268,21 @@ Prodoct
 */
 
 #productcontainer:hover{
-  box-shadow: 7px 7px 7px rgb(161, 155, 155);
+  box-shadow: 10px 10px 6px rgb(161, 155, 155);
 
 }
 #productcontainer{
   display: flex;
   flex-direction: column;
-  border: 3px solid rgb(161, 155, 155);
+  border: 3px solid rgb(182, 178, 178);
 
   width: 300px;
   height: 450px;
-  margin: 60px;
+  margin: 30px;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  background-color: rgb(0, 255, 136);
+  border-radius: 10px;
+  background-color: rgba(0, 255, 136, 0.833);
 }
 #productbuyitem{
   display: flex;
@@ -312,6 +330,18 @@ Prodoct
 products
 
 */
+#productscontainer{
+  border: 5px solid rgb(144, 139, 139);
+  width: 80%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-right: 10%;
+  margin-left: 10%;
+  border-radius: 30px;
+  padding-bottom: 30px;
+    background-color:  rgba(179, 186, 184, 0.129);
+ 
+}
 #products{
   display: flex;
   flex-wrap: wrap;

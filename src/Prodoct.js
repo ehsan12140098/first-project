@@ -57,7 +57,7 @@ const Prodoct = ({ prodoctname1 }) => {
   return (
     <div>
       <div id="productcontainer">
-        <img id="productimg" src={newprodoctname.ax} width="250px" height="200px" alt="Product Image"/>
+        <img id="productimg" src={newprodoctname.ax} width="200px" height="200px" alt="Product Image"/>
         <h1 id="productname" style={{margin:"15px"}}> {newprodoctname.name}</h1>
         {newprodoctname.mojody ? (
           newprodoctname.newprice ? (

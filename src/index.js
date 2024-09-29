@@ -13,6 +13,7 @@ import Basketitems from './Basketitems';
 import Prodoctserched from './Prodoctitem';
 import Signup from './signup';
 import Login from './Login';
+import Insatagramlink from './insatagramlink';
 const Ap=()=>{
     const [prodoctsname,setProdoctsname]=useState(mahsolat);
     const [openclosesidebar,setOpenclosesidebar]=useState(true);
@@ -25,7 +26,7 @@ const Ap=()=>{
       <Router>
         <Topmenu openclosesidebar={openclosesidebar}  setOpenclosesidebar={setOpenclosesidebar}/>
         <Sidebar openclosesidebar={openclosesidebar}  setOpenclosesidebar={setOpenclosesidebar}/>
-       
+        <Insatagramlink/>
         <Routes>
       
           <Route path='Product' element={<Prodocts />} />

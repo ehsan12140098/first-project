@@ -16,7 +16,7 @@ const Prodoctserched = () => {
             setU(filteredProducts[0]); // مستقیماً اولین محصول را در state ذخیره کن
         }
     }, [num, prodoctsname]); // این useEffect هر بار که num یا لیست محصولات تغییر کند، اجرا می‌شود
-    console.log(u)
+    
     return (
         <div>
             {/* فقط در صورتی که محصولی پیدا شده باشد، کامپوننت Prodoct را نمایش بده */}

@@ -11,7 +11,7 @@ const Prodoctserched = () => {
     useEffect(() => {
         // فیلتر کردن محصولات براساس عدد پارامتر URL
         const filteredProducts = prodoctsname.filter(product => product.number == num);
-        // اگر محصولی پیدا شد، اولین محصول فیلتر شده را در state ذخیره کن
+       
         if (filteredProducts.length > 0) {
             setU(filteredProducts[0]); // مستقیماً اولین محصول را در state ذخیره کن
         }

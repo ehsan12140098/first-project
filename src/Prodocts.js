@@ -11,7 +11,7 @@ const Prodocts = () => {
     let sortedProducts = [...products];
 
     if (value === "0") {
-      // مرتب‌سازی جدیدترین (فرض کنیم بر اساس شماره مرتب کنیم)
+      
       sortedProducts.sort((a, b) => a.number - b.number);
     } else if (value === "1") {
       // مرتب‌سازی ارزان به گران

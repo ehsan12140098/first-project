@@ -25,6 +25,7 @@ const Prodoct = ({ prodoctname1 }) => {
     setBasketelem(updatedBasket);
   };
 
+  
   useEffect(() => {
     setNewprodoctname({ ...prodoctname1 });
   }, [prodoctname1]);

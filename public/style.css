@@ -330,8 +330,21 @@ Prodoct
 products
 
 */
+#sorting{
+  position: absolute;
+  top: 30px;
+  left: 85px;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  border: 2px solid rgb(161, 155, 155);
+  border-radius: 4px;
+}
+
+
 #productscontainer{
   border: 5px solid rgb(144, 139, 139);
+  position: relative;
   width: 80%;
   margin-top: 80px;
   margin-bottom: 80px;

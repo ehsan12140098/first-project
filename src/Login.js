@@ -1,6 +1,6 @@
 import { Formik, Form, FastField, ErrorMessage } from "formik";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { json, Link, useNavigate } from "react-router-dom";
+import { json, Link, useNavigate , useLocation} from "react-router-dom";
 import * as Yup from 'yup';
 import { Text } from "./Text";
 import swal from "sweetalert";
@@ -26,6 +26,7 @@ const Login = () => {
     const [userData,setUserData]=useState({});
     const myref=useRef();
     const navigate=useNavigate();
+    const location = useLocation();
     const {userdatas,setUserdatas}=useContext(Text)
     const [initialValues, setInitialValues] = useState({
         name: "",
@@ -58,7 +59,8 @@ const Login = () => {
             swal(` کاربر گرامی ${values.name}`, "ورود شما با موفقیت انجام شد", "success")
             .then(() => {
                 setUserdatas(userData);
-                navigate("/Product")
+                const from = location.state?.from || "/Product"; // اگر مسیر قبلی موجود نبود، به صفحه اصلی بروید
+                navigate(from); // هدایت به صفحه‌ای که قبل از لاگین کاربر قصد داشت برود
 
             });
         // اینجا می‌توانید عملیات ورود را انجام دهید

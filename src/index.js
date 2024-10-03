@@ -13,14 +13,20 @@ import Basketitems from './Basketitems';
 import Prodoctserched from './Prodoctitem';
 import Signup from './signup';
 import Login from './Login';
+import Send from './Send';
 import Insatagramlink from './insatagramlink';
+import SendingAddresses from './SendingAddresses';
 const Ap=()=>{
     const [prodoctsname,setProdoctsname]=useState(mahsolat);
     const [openclosesidebar,setOpenclosesidebar]=useState(true);
     const [basketelem,setBasketelem]=useState([]);
     const [userdatas,setUserdatas]=useState(false);
-    
-    return(<Text.Provider value={{prodoctsname,setProdoctsname,basketelem,setBasketelem,userdatas,setUserdatas}}>
+    const [totalprice,setTotalprice]=useState(false);
+    const [totalnewprice,setTotalnewprice]=useState(false);
+    const [total,setTotal]=useState(false);
+    return(<Text.Provider value={{prodoctsname,setProdoctsname,basketelem,setBasketelem,userdatas,setUserdatas,
+      totalprice,setTotalprice,totalnewprice,setTotalnewprice,total,setTotal
+    }}>
       <div >
  
       <Router>
@@ -34,6 +40,8 @@ const Ap=()=>{
           <Route path='Productserched/:num' element={<Prodoctserched />}/>
           <Route path='Signup' element={<Signup/>} />
           <Route path='Login' element={ <Login/>} />
+          <Route path='Send' element={ <Send/>} />
+          <Route path='SendingAddresses' element={ <SendingAddresses/>} />
           {/* روت پیش‌فرض (زمانی که هیچ روتی وارد نشد یا اشتباه بود) */}
           <Route path="*" element={<Navigate to="/Product" />} />
           

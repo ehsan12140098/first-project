@@ -47,7 +47,6 @@ const Topmenu = ({ setOpenclosesidebar }) => {
         };
     }, []);  // اجرا فقط یک بار هنگام mount شدن کامپوننت
     
-    console.log(userdatas)
     return (
         <div id="top-menu">
             <div id="basketicon-reg">

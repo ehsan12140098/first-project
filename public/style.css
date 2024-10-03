@@ -352,8 +352,7 @@ products
   margin-left: 10%;
   border-radius: 30px;
   padding-bottom: 30px;
-    background-color:  rgba(179, 186, 184, 0.129);
- 
+  background-color: #f6f6f6; 
 }
 #products{
   display: flex;
@@ -426,7 +425,7 @@ Basketitems
   border: 2px solid rgb(161, 155, 155);
  width: 90px;
   background-color: buttonface;
-  height: 50px;
+  height: 30px;
   
   display: inline-block;
 text-align: center;
@@ -504,7 +503,7 @@ height: 40px;
 border-radius: 6px;
 font-size: 20px;
 border: 2px solid rgb(161, 155, 155);
-background-color: rgb(255, 251, 251);
+background-color: rgb(164, 221, 248);
 cursor: pointer;
 
 }
@@ -580,3 +579,221 @@ Login
     margin-bottom: 40px;
     
   }
+
+  /*
+
+  send
+
+
+  */
+  
+  #sending{
+    display: flex;
+    width: 85%;
+  }
+
+#boxprice{
+  width: 25%;
+  background-color: #ffffff;
+  direction: rtl;
+  border-radius: 20px;
+  max-height: max-content;
+  margin-top: 30px;
+
+}
+#boxaddress{
+  width: 75%;
+}
+#processsending{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  margin: 30px;
+  border-radius: 20px;
+direction: rtl;
+}
+
+.processitem{
+  width: 20%;
+}
+
+.processitemname{
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-bottom: 5px;
+}
+.processbars{
+  height: 20px;
+  border-bottom: 3px solid rgb(243, 244, 242);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.processbars>span{
+border: 3px solid rgb(243, 244, 242);
+font-size: 14px;
+border-radius: 3px;
+width: 20px;
+height: 20px;
+display: inline-block;
+transform: translateY(9px);
+background-color: #ffffff;
+}
+#sendingcontainer{
+
+  direction: rtl;
+  background-color: #ffffff;
+  padding:20px ;
+  margin: 30px;
+  border-radius: 20px;
+  
+}
+
+
+
+#addrescontaniers{
+  margin-bottom: 40px;
+  
+}
+.sendingaddress{
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+#addrescontanier{
+  display: flex;
+  margin-bottom: 30px ;
+  opacity: 0.5;
+  
+  }
+  #addrescontanier:hover{
+    opacity: 1;
+  }
+
+#addres{
+  width: 100%;
+  border: 2px solid #eeee;
+  border-radius: 10px;
+}
+#addres1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f7f7f7;
+  height: 50px;
+}
+#addres2{
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #eeee;
+  height: 80px;
+  margin: 0px ;
+
+}
+#addres3{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+#addres1span1{
+  border-left: 2px solid #dddadaee;
+  padding:0px 10px 0px 10px;
+
+}
+#viraeh{
+  border-left: 2px solid #dddadaee;
+}
+#addres3phone{
+  border-left: 2px solid #dddadaee;
+  padding:0px 10px 0px 10px;
+
+}
+.viraeshdilit{
+  text-decoration: none;
+  padding:0px 10px 0px 10px;
+  color: #000;
+}
+.viraeshdilit:hover{
+ 
+  color: red;
+}
+#addres3post{
+  border-right: 2px solid #dddadaee;
+  padding:0px 10px 0px 10px;
+
+}
+#Addressbottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#Addressbottom1{
+width:30%;
+font-size:16px;
+height:40px;
+border: 2px solid rgb(161, 155, 155);
+border-radius: 5px;
+cursor: pointer;
+}
+#Addressbottom2{
+  width:15%;
+  font-size:16px;
+  height:40px;
+  border: 2px solid rgb(161, 155, 155);
+  border-radius: 5px;
+  cursor: pointer;
+}
+#Addressbottom1:hover,
+#Addressbottom2:hover
+{
+  box-shadow: 7px 7px 4px rgb(161, 155, 155);
+
+}
+/*
+
+SendingAddresses
+*/
+
+#SendingAddresses{
+  direction: rtl;
+  width: 60%;
+  background-color: #ffffff;
+  border-radius: 30px;
+  margin-top: 50px;
+  margin-bottom:50px ;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Addressinput{
+  width: 60%;
+  height: 30px;
+  border: 2px solid rgb(161, 155, 155);
+  border-radius: 6px;
+  font-size: 16px;
+  
+
+}
+.Addresslabel{
+  text-align: right;
+  display: inline-block;
+  width: 20%;
+}
+#sabtneshani{
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  background-color:red;
+  color: white;
+  cursor: pointer;
+  border: 2px solid red;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+#sabtneshani:hover{
+color: red;
+background-color: #ffffff;
+}

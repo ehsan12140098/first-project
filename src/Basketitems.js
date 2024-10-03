@@ -1,22 +1,43 @@
 import React, { useContext, useEffect, useMemo, useState } from "react";
 import Basketitem from "./Basketitem";
 import { Text } from "./Text";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate} from "react-router-dom";
 
 const Basketitems = () => {
-  const { basketelem } = useContext(Text);
-
+  const { basketelem ,totalprice,setTotalprice,totalnewprice,setTotalnewprice,total,setTotal} = useContext(Text);
+  const navigate = useNavigate();
   // تعریف state برای total
-  const [total, setTotal] = useState(0);
+  const [total1, setTotal1] = useState(0);
 
-  const totalprice = useMemo(() => {
-    return basketelem.reduce((acc, item) => {
+  const totalprice1 = useMemo(() => {
+    let tp1=basketelem.reduce((acc, item) => {
       return acc + (item.qty * item.price);
     }, 0);
+    setTotalprice(tp1);
+    return tp1
   }, [basketelem]);
 
-  const totalnewprice = useMemo(() => {
-    return basketelem.reduce((acc, item) => {
+
+
+ const handleContinue = () => {
+  const userData = localStorage.getItem("Userdatas");
+
+  if (userData) {
+    // If user is logged in, redirect to the "ارسال" page
+    navigate("/send");
+  } else {
+    // If user is not logged in, redirect to the "Login" page
+    
+    navigate("/login", { state: { from: "/Send" } }); // مسیر قبلی را با state ارسال کنید
+  }
+};
+
+
+
+
+
+  const totalnewprice1 = useMemo(() => {
+    let tnp1=basketelem.reduce((acc, item) => {
       // اگر newprice وجود داشته باشد، از قیمت جدید محاسبه می‌شود
       if (item.newprice) {
         return acc + (item.qty * (item.price - item.newprice));
@@ -24,12 +45,14 @@ const Basketitems = () => {
         return acc;
       }
     }, 0);
+    setTotalnewprice(tnp1);
+    return tnp1
   }, [basketelem]);
 
   useEffect(() => {
-    setTotal(totalprice - totalnewprice); // استفاده از setTotal برای به‌روزرسانی
-  }, [totalprice, totalnewprice]); // هر دو مقدار را در useEffect وابسته قرار می‌دهیم
-
+    setTotal1(totalprice1 - totalnewprice1); // استفاده از setTotal برای به‌روزرسانی
+    setTotal(totalprice1 - totalnewprice1);
+  }, [totalprice1, totalnewprice1]); // هر دو مقدار را در useEffect وابسته قرار می‌دهیم
   return (
     <div>
       {basketelem.length ? (
@@ -50,11 +73,11 @@ const Basketitems = () => {
               <h1 style={{ marginBottom: "40px" }}>صورت حساب شما</h1>
               <div id="pricecontaner">
                 
-                 <Link to="#" id="buybottom" style={{textDecoration:"none",fontSize:"30px",color:"black",display:"inline-block"}}>ادامه</Link>
+                 <span onClick={handleContinue} id="buybottom" style={{textDecoration:"none",fontSize:"20px",color:"black",display:"inline-block"}}>ادامه</span>
                 
-                <h2 className="pricecontaner">{total} مبلغ قابل پرداخت</h2>
-                <h2 className="pricecontaner">{totalnewprice} سود شما از خرید</h2>
-                <h2 className="pricecontaner">{totalprice} کل مبلغ خرید شما</h2>
+                <h2 className="pricecontaner">{total1} مبلغ قابل پرداخت</h2>
+                <h2 className="pricecontaner">{totalnewprice1} سود شما از خرید</h2>
+                <h2 className="pricecontaner">{totalprice1} کل مبلغ خرید شما</h2>
               </div>
             </div>
           </div>

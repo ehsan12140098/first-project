@@ -674,7 +674,7 @@ background-color: #ffffff;
 #addres{
   width: 100%;
   border: 2px solid #eeee;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 #addres1{
   display: flex;
@@ -796,4 +796,89 @@ SendingAddresses
 #sabtneshani:hover{
 color: red;
 background-color: #ffffff;
+}
+
+/*
+
+Sendingway
+
+
+*/
+
+#Sendingways{
+  width: 100%;
+  border: 2px solid #eeee;
+  border-radius: 20px;
+  display: flex;
+  padding: 10px;
+  direction: rtl;
+  text-align: center;
+  
+}
+#Sendingway1{
+  width: 25%;
+}
+#Sendingway11{
+  width: 75%;
+  display: flex;
+}
+#Sendingway2{
+  width: 25%;
+  padding-left: 15px;
+}
+#Sendingway3{
+  width: 50%;
+  text-align: justify;
+
+}
+
+#Sendingway4{
+  width: 25%;
+}
+#Sendingwayimge{
+  width:90%;
+  margin-top: 5px;
+
+}
+
+
+
+
+/*
+
+
+Dargah
+
+
+*/
+
+.bankname{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.bankname>span{
+  font-size: 20px;
+}
+.rulename{
+  appearance: none; /* حذف استایل پیش‌فرض مرورگر */
+  width: 15px; /* عرض مربع */
+  height: 15px; /* ارتفاع مربع */
+  background-color: white; /* رنگ پس‌زمینه */
+  border: 2px solid red; /* رنگ و ضخامت کادر */
+  border-radius: 0; /* بدون گوشه گرد، که مربع می‌سازد */
+  display: inline-block;
+  position: relative;
+  margin-left: 30px;
+}
+
+.rulename:checked::before {
+  content: "";
+  position: absolute;
+  width: 10px; 
+  height: 10px;
+  background-color: red;
+  top: 1px;
+  left: 1px;
+  border-radius: 0%;
 }

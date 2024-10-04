@@ -11,4 +11,5 @@ export const Text=createContext({prodoctname:"",
     setTotalnewprice:()=>{},
     total:false,
     setTotal:()=>{},
+    Sendingway:""
 });

@@ -4,23 +4,18 @@ import { Text } from "./Text";
 import {  Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faMapMarker, faMobile, faPhone, faSignsPost, faTruck } from "@fortawesome/free-solid-svg-icons";
-
 const Send=()=>{
     const [adress, setAdress] = useState([]);
     const { totalprice,totalnewprice,total} = useContext(Text);
     const navigate=useNavigate();
-    const navigates=useNavigate();
-    console.log(totalprice);
-    console.log(total);
-    console.log(totalnewprice)
+    
     const [selectedAddress, setSelectedAddress] = useState("");
 
     // تابع برای دریافت آدرس انتخاب شده
-    const handleAddressChange = (event) => {
+    const handleAddress = (event) => {
       setSelectedAddress(JSON.parse(event.target.value));
 
     };
-    console.log(selectedAddress)
 
     useEffect(() => {
         const savedAddresses = JSON.parse(localStorage.getItem("SendingAddresses")) || [];
@@ -81,13 +76,13 @@ const Send=()=>{
                         <div id="addrescontaniers">
                                 {adress.map((u, index) => (
                                     <div id="addrescontanier" key={index} >
-                                        <input type="radio" className="sendingaddress" name="sendingaddress" value={JSON.stringify(u)}    onChange={handleAddressChange}></input>
+                                        <input type="radio" className="sendingaddress" name="sendingaddress" value={JSON.stringify(u)}    onChange={handleAddress}></input>
                                         <div id="addres">
                                             <div id="addres1">
                                                 <span id="addres1span1">نشانی من</span>
                                                 <span>{u.name} {u.family}</span>
                                                 <div>
-                                                    <Link className="viraeshdilit" id="viraeh" to="#"> ویرایش </Link>
+                                                    <Link className="viraeshdilit" id="viraeh" to={`/Addressedit/${index}`}> ویرایش </Link>
                                                     <span style={{cursor:"pointer"}} onClick={()=>{handeldilitaddress(index)}} className="viraeshdilit"  to="#"> حذف </span>
                                                 </div>
                                             </div>
@@ -107,9 +102,9 @@ const Send=()=>{
                                 ))}
                         </div>
                         <div id="Addressbottom">
-                        <button onClick={()=>{navigates("/SendingAddresses")}} id="Addressbottom1" >افزودن نشانی جدید</button>
+                        <button onClick={()=>{navigate("/SendingAddresses")}} id="Addressbottom1" >افزودن نشانی جدید</button>
 
-                        <button  id="Addressbottom2" >ادامه</button>
+                        <button  disabled={!selectedAddress} onClick={()=>{navigate("/Sendingway")}} id="Addressbottom2" >ادامه</button>
 
                         </div>
 

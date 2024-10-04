@@ -16,6 +16,10 @@ import Login from './Login';
 import Send from './Send';
 import Insatagramlink from './insatagramlink';
 import SendingAddresses from './SendingAddresses';
+import Addressedit from './Addressedit';
+import Sendingway from './Sendingway';
+import { Sendingwayss } from './Sendingways';
+import Dargah from './Dargah';
 const Ap=()=>{
     const [prodoctsname,setProdoctsname]=useState(mahsolat);
     const [openclosesidebar,setOpenclosesidebar]=useState(true);
@@ -24,8 +28,10 @@ const Ap=()=>{
     const [totalprice,setTotalprice]=useState(false);
     const [totalnewprice,setTotalnewprice]=useState(false);
     const [total,setTotal]=useState(false);
+    const [Sendingways,setSendingways]=useState(Sendingwayss);
+
     return(<Text.Provider value={{prodoctsname,setProdoctsname,basketelem,setBasketelem,userdatas,setUserdatas,
-      totalprice,setTotalprice,totalnewprice,setTotalnewprice,total,setTotal
+      totalprice,setTotalprice,totalnewprice,setTotalnewprice,total,setTotal,Sendingways
     }}>
       <div >
  
@@ -42,6 +48,10 @@ const Ap=()=>{
           <Route path='Login' element={ <Login/>} />
           <Route path='Send' element={ <Send/>} />
           <Route path='SendingAddresses' element={ <SendingAddresses/>} />
+          <Route path="Addressedit/:index" element={<Addressedit />} />
+          <Route path="Sendingway" element={<Sendingway />} />
+          <Route path="Dargah" element={<Dargah />} />
+
           {/* روت پیش‌فرض (زمانی که هیچ روتی وارد نشد یا اشتباه بود) */}
           <Route path="*" element={<Navigate to="/Product" />} />
           

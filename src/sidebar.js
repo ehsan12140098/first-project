@@ -37,7 +37,7 @@ const Sidebar=({ openclosesidebar, setOpenclosesidebar })=>{
                         </li>
                         
                         <li className="sidebarlists"><Link to="#" style={{color:"black"}}>رضایت مشتری</Link></li>
-                        <li className="sidebarlists"><Link to="#" style={{color:"black"}}>بارنامه ارسالی</Link></li>
+                        <li className="sidebarlists"><Link to="/Customersatisfaction1/1" style={{color:"black"}}>بارنامه ارسالی</Link></li>
                         <li className="sidebarlists"><Link to="#" style={{color:"black"}}>در باره ما</Link></li>
             
                 </ul>

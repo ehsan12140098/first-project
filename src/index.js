@@ -20,6 +20,7 @@ import Addressedit from './Addressedit';
 import Sendingway from './Sendingway';
 import { Sendingwayss } from './Sendingways';
 import Dargah from './Dargah';
+import Customersatisfaction1 from './Customersatisfaction';
 const Ap=()=>{
     const [prodoctsname,setProdoctsname]=useState(mahsolat);
     const [openclosesidebar,setOpenclosesidebar]=useState(true);
@@ -51,6 +52,7 @@ const Ap=()=>{
           <Route path="Addressedit/:index" element={<Addressedit />} />
           <Route path="Sendingway" element={<Sendingway />} />
           <Route path="Dargah" element={<Dargah />} />
+          <Route path="Customersatisfaction1/:p" element={<Customersatisfaction1 />} />
 
           {/* روت پیش‌فرض (زمانی که هیچ روتی وارد نشد یا اشتباه بود) */}
           <Route path="*" element={<Navigate to="/Product" />} />

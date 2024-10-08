@@ -238,12 +238,12 @@ Footer
 
   }
   
-  #sidebarlist :not(:last-child) {
+  .sidebarlists:not(:last-child) {
     /* استایل دلخواه */
     border-bottom: 2px solid  rgb(161, 155, 155);
     transition-duration: 0.3s;
 }
-#sidebarlist > li:hover {
+#sidebarlist>li:hover {
   background-color: rgb(182, 213, 213);
 }
 #keshtlist{
@@ -255,6 +255,11 @@ Footer
   background-color: #f6f6f6;
 
 }
+
+.keshtlists{
+  border-top: 2px solid  rgb(161, 155, 155);
+}
+
 .keshtlists:hover{
   background-color: rgb(182, 213, 213);
 }
@@ -277,7 +282,7 @@ Prodoct
   border: 3px solid rgb(182, 178, 178);
 
   width: 300px;
-  height: 450px;
+  height: 500px;
   margin: 30px;
   justify-content: center;
   align-items: center;
@@ -316,14 +321,38 @@ Prodoct
   border-radius: 40%;
 }
 
-#productimg:hover{
-  transform: scale(1.5);
+.image-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: zoom-in;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* حفظ نسبت تصویر در ظرف */
+  transition: transform 0.3s ease;
+  border-radius: 10px;
 
 }
-#productimg{
-  
+
+.zoomed {
+  transform: scale(1.8);
+  transition: transform 0.3s ease;
   border-radius: 10px;
+  width: 250px;
+  height: 250px;
+
 }
+
+
+
+
+
+
 
 /*
 
@@ -918,9 +947,7 @@ Customersatisfactionitem
   height: 330px;
   border-radius: 10px;
 }
-#Customeritemimge:hover{
-  scale: 1.2;
-}
+
 .Customeritemtext{
   font-size: 17px;
   font-weight: 900;
@@ -960,4 +987,46 @@ Customersatisfactionitems
 .Customersatisfactionbutton:hover{
   cursor: pointer;
   background-color: #ffffff;
+}
+
+
+
+
+/*
+
+
+Kesht1
+
+
+*/
+
+#kesht1container{
+  direction: rtl;
+  width: 80%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#kesht1container p {
+font-size: 16px;
+}
+
+#kesht1container h1 {
+  margin-right: 0%;
+  margin-top: 60px;
+
+}
+
+#kesht1container h2 {
+  margin-right: 0%;
+
+}
+
+.kesht11{
+border-radius: 15px;
+  width: 250px;
+  height: 200px;
 }

@@ -18,10 +18,16 @@ const Prodoctserched = () => {
     }, [num, prodoctsname]); // این useEffect هر بار که num یا لیست محصولات تغییر کند، اجرا می‌شود
     
     return (
-        <div>
-            {/* فقط در صورتی که محصولی پیدا شده باشد، کامپوننت Prodoct را نمایش بده */}
-            {u ? <Prodoct key={u.number} prodoctname1={u} /> : <p>محصولی یافت نشد</p>}
-        </div>
+       <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+            <div style={{margin:"40px",backgroundColor:"#f6f6f6",border:"5px solid rgb(144, 139, 139)"
+                ,borderRadius:"30px",padding:"30px",width:"50%",display:"flex",justifyContent:"center",alignItems:"center",
+                flexDirection:"column"
+            }}>
+                <h1>محصول</h1>
+                {/* فقط در صورتی که محصولی پیدا شده باشد، کامپوننت Prodoct را نمایش بده */}
+                {u ? <Prodoct key={u.number} prodoctname1={u} /> : <p>محصولی یافت نشد</p>}
+            </div>
+       </div>
     );
 };
 

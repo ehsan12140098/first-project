@@ -1,11 +1,11 @@
-import React, { useContext, useState ,useEffect } from "react";
+import React, { useContext, useState ,useEffect, forwardRef } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faSearch, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 import { Link, useLoaderData } from "react-router-dom";
 import { Text } from "./Text";
 import { click } from "@testing-library/user-event/dist/click";
 
-const Topmenu = ({ setOpenclosesidebar }) => {
+const Topmenu =forwardRef ( ({ setOpenclosesidebar },ref) => {
     const [searchProduct, setSearchProduct] = useState([]);
     const { basketelem, prodoctsname ,userdatas,setUserdatas} = useContext(Text);
     const handleSearch = (value) => {
@@ -48,7 +48,7 @@ const Topmenu = ({ setOpenclosesidebar }) => {
     }, []);  // اجرا فقط یک بار هنگام mount شدن کامپوننت
     
     return (
-        <div id="top-menu">
+        <div id="top-menu" ref={ref}>
             <div id="basketicon-reg">
                 <div id="basketicon">
                     <span>{basketelem.length}</span>
@@ -131,6 +131,6 @@ const Topmenu = ({ setOpenclosesidebar }) => {
             </div>
         </div>
     );
-};
+});
 
 export default Topmenu;

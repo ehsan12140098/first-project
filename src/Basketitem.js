@@ -26,30 +26,40 @@ const Basketitem = ({ item }) => {
   return (
     <div>
       <div id="listkharid">
-        <img className="basketbakhsh" id="listkharidimg" src={item.ax} style={{ borderRadius: "50%" }} width="150px" height="100px" alt="Product Image" />
-        <h3 className="basketbakhsh">نام محصول: {item.name}</h3>
-        <h3 className="basketbakhsh" style={{ margin: "15px" }}>
-          قیمت:
-          {item.newprice ? (
-            <>
-              <span style={{ color: "red", margin: "0 0px" }}>{item.newprice}</span>
-              <del style={{ marginLeft: "5px" }}>{item.price}</del> تومان
-            </>
-          ) : (
-            <>{item.price} تومان</>
-          )}
-        </h3>
-        <h5 className="basketbakhsh">وزن: {item.net} کیلو</h5>
-
-        {/* بخش افزایش و کاهش مقدار */}
-        <div className="basketbakhsh">
-          <div>
-            <button className="productbuym" onClick={() => handelsetqty(item.qty + 1)}>+</button>
-            <input id="productbuynumber" type="text" value={item.qty} onChange={(e) => handelsetqty(Number(e.target.value))} />
-            <button className="productbuym" onClick={() => handelsetqty(item.qty - 1)}>-</button>
-            <FontAwesomeIcon icon={faTrash} style={{ cursor: "pointer", paddingLeft: "40px" }} onClick={handeldilit} />
-          </div>
+        <div className="basketbakhsh" style={{width:"20%"}}>
+          <img  id="listkharidimg" src={item.ax} style={{ borderRadius: "50%" }} width="80%" height="100px" alt="Product Image" />
         </div>
+        <div className="basketbakhsh" style={{width:"20%"}}>
+         <h3 >نام محصول: {item.name}</h3>
+        </div>
+        <div className="basketbakhsh" style={{width:"35%" , display:"flex",alignItems:"center"}}>
+          <h3  style={{ margin: "15px" }}>
+            قیمت:
+            {item.newprice ? (
+              <>
+                <span style={{ color: "red", margin: "0 0px" }}>{item.newprice}</span>
+                <del style={{ marginLeft: "5px" }}>{item.price}</del> تومان
+              </>
+            ) : (
+              <>{item.price} تومان</>
+            )}
+          </h3>
+          <h5 >وزن: {item.net} کیلو</h5>
+
+        </div>
+        <div className="basketbakhsh" style={{width:"25%"}}>
+            {/* بخش افزایش و کاهش مقدار */}
+          
+            <div>
+              <button className="productbuym" onClick={() => handelsetqty(item.qty + 1)}>+</button>
+              <input id="productbuynumber" type="text" value={item.qty} onChange={(e) => handelsetqty(Number(e.target.value))} />
+              <button className="productbuym" onClick={() => handelsetqty(item.qty - 1)}>-</button>
+              <FontAwesomeIcon icon={faTrash} style={{ cursor: "pointer", paddingLeft: "40px" }} onClick={handeldilit} />
+            </div>
+          
+        </div>
+
+        
       </div>
     </div>
   );

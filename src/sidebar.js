@@ -35,15 +35,15 @@ const Sidebar=forwardRef(({ openclosesidebar, setOpenclosesidebar },ref)=>{
                             <div id="keshtlist" >
                                 <ul style={{listStyle:"none",margin:"0px" ,padding:"0px"}}>
                                 <li className="keshtlists"><Link to="/Kesht1" style={{color:"black"}}>کشت اول</Link></li>
-                                <li className="keshtlists"><Link to="#" style={{color:"black"}}>کشت دوم</Link></li>
+                                <li className="keshtlists"><Link to="/Kesht2" style={{color:"black"}}>کشت دوم</Link></li>
                                 </ul>
                             
                             </div>
                         </li>
                         
-                        <li className="sidebarlists"><Link to="#" style={{color:"black"}}>رضایت مشتری</Link></li>
+                        <li className="sidebarlists"><Link to="/Comments" style={{color:"black"}}>رضایت مشتری</Link></li>
                         <li className="sidebarlists"><Link to="/Customersatisfaction1/1" style={{color:"black"}}>بارنامه ارسالی</Link></li>
-                        <li className="sidebarlists"><Link to="#" style={{color:"black"}}>در باره ما</Link></li>
+                        <li className="sidebarlists"><Link to="/Aboutme" style={{color:"black"}}>در باره ما</Link></li>
             
                 </ul>
       

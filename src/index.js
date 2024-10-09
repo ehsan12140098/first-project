@@ -20,6 +20,9 @@ import { Sendingwayss } from './Sendingways';
 import Dargah from './Dargah';
 import Customersatisfaction1 from './Customersatisfaction';
 import Kesht1 from './kesht1';
+import Kesht2 from './kesht2';
+import Aboutme from './Aboutme';
+import Comments from './Commens';
 
 const Ap = () => {
   const [prodoctsname, setProdoctsname] = useState(mahsolat);
@@ -52,7 +55,7 @@ const Ap = () => {
       document.removeEventListener("click", handlesidebarOut);
     };
   }, []);
-
+console.log(localStorage.getItem("Userdatas"));
   return (
     <Text.Provider value={{ prodoctsname, setProdoctsname, basketelem, setBasketelem, userdatas, setUserdatas,
       totalprice, setTotalprice, totalnewprice, setTotalnewprice, total, setTotal, Sendingways
@@ -75,6 +78,10 @@ const Ap = () => {
             <Route path="Dargah" element={<Dargah />} />
             <Route path="Customersatisfaction1/:p" element={<Customersatisfaction1 />} />
             <Route path="Kesht1" element={<Kesht1 />} />
+            <Route path="Kesht2" element={<Kesht2 />} />
+            <Route path="Aboutme" element={<Aboutme />} />
+            <Route path="Comments" element={<Comments />} />
+
 
             <Route path="*" element={<Navigate to="/Product" />} />
           </Routes>

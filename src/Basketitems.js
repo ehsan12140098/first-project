@@ -43,9 +43,9 @@ const Basketitems = () => {
   };
 
   return (
-    <div>
+    <div style={{display:"flex",justifyContent:"center"}}>
       {basketelem.length ? (
-        <div>
+        <div >
           <div style={{ textAlign: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <span style={{ fontSize: "20px" }}>{basketelem.length}</span>
             <h2 style={{ display: "inline-block" }}>:تعداد محصول در سبد</h2>
@@ -60,12 +60,16 @@ const Basketitems = () => {
           <div className="buys">
             <div id="pricecontaners">
               <h1 style={{ marginBottom: "40px" }}>صورت حساب شما</h1>
-              <div id="pricecontaner">
-                <span onClick={handleContinue} id="buybottom" style={{ textDecoration: "none", fontSize: "20px", color: "black", display: "inline-block" }}>ادامه</span>
-                <h2 className="pricecontaner">{total} مبلغ قابل پرداخت</h2>
-                <h2 className="pricecontaner">{totalnewprice1} سود شما از خرید</h2>
-                <h2 className="pricecontaner">{totalprice1} کل مبلغ خرید شما</h2>
+              <div style={{display:"flex",justifyContent:"space-between",width:"100%",alignItems:"center"}}>
+                <span onClick={handleContinue} id="buybottom" style={{ textDecoration: "none", fontSize: "20px", color: "black", display: "inline-block" ,marginLeft:"15px", }}>ادامه</span>
+
+                <div id="pricecontaner">
+                  <h3 className="pricecontaner">مبلغ قابل پرداخت{total} تومان</h3>
+                  <h3 className="pricecontaner"> سود شما{totalnewprice1} تومان</h3>
+                  <h3 className="pricecontaner">کل مبلغ خریدشما{totalprice1} تومان</h3>
+                </div>
               </div>
+
             </div>
           </div>
         </div>

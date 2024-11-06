@@ -61,31 +61,34 @@ console.log(localStorage.getItem("Userdatas"));
       totalprice, setTotalprice, totalnewprice, setTotalnewprice, total, setTotal, Sendingways
     }}>
       <div>
-        <Router>
-          <Topmenu openclosesidebar={openclosesidebar} setOpenclosesidebar={setOpenclosesidebar} ref={topmenuRef} />
-          <Sidebar openclosesidebar={openclosesidebar} setOpenclosesidebar={setOpenclosesidebar} ref={sidebarRef} />
-          <Insatagramlink />
-          <Routes>
-            <Route path='Product' element={<Prodocts />} />
-            <Route path='Basket' element={<Basketitems />} />
-            <Route path='Productserched/:num' element={<Prodoctserched />} />
-            <Route path='Signup' element={<Signup />} />
-            <Route path='Login' element={<Login />} />
-            <Route path='Send' element={<Send />} />
-            <Route path='SendingAddresses' element={<SendingAddresses />} />
-            <Route path="Addressedit/:index" element={<Addressedit />} />
-            <Route path="Sendingway" element={<Sendingway />} />
-            <Route path="Dargah" element={<Dargah />} />
-            <Route path="Customersatisfaction1/:p" element={<Customersatisfaction1 />} />
-            <Route path="Kesht1" element={<Kesht1 />} />
-            <Route path="Kesht2" element={<Kesht2 />} />
-            <Route path="Aboutme" element={<Aboutme />} />
-            <Route path="Comments" element={<Comments />} />
+        <div style={{ minHeight: "calc(100vh - 206px)" }}>
+          
+          <Router>
+            <Topmenu openclosesidebar={openclosesidebar} setOpenclosesidebar={setOpenclosesidebar} ref={topmenuRef} />
+            <Sidebar openclosesidebar={openclosesidebar} setOpenclosesidebar={setOpenclosesidebar} ref={sidebarRef} />
+            <Insatagramlink />
+            <Routes>
+              <Route path='Product' element={<Prodocts />} />
+              <Route path='Basket' element={<Basketitems />} />
+              <Route path='Productserched/:num' element={<Prodoctserched />} />
+              <Route path='Signup' element={<Signup />} />
+              <Route path='Login' element={<Login />} />
+              <Route path='Send' element={<Send />} />
+              <Route path='SendingAddresses' element={<SendingAddresses />} />
+              <Route path="Addressedit/:index" element={<Addressedit />} />
+              <Route path="Sendingway" element={<Sendingway />} />
+              <Route path="Dargah" element={<Dargah />} />
+              <Route path="Customersatisfaction1/:p" element={<Customersatisfaction1 />} />
+              <Route path="Kesht1" element={<Kesht1 />} />
+              <Route path="Kesht2" element={<Kesht2 />} />
+              <Route path="Aboutme" element={<Aboutme />} />
+              <Route path="Comments" element={<Comments />} />
 
 
-            <Route path="*" element={<Navigate to="/Product" />} />
-          </Routes>
+              <Route path="*" element={<Navigate to="/Product" />} />
+            </Routes>
         </Router>
+        </div>
         <Footer />
       </div>
     </Text.Provider>

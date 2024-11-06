@@ -43,15 +43,15 @@ const Basketitems = () => {
   };
 
   return (
-    <div style={{display:"flex",justifyContent:"center"}}>
+    <div >
       {basketelem.length ? (
-        <div >
+        <div style={{width:"100%",display:"flex",justifyContent:"center",flexDirection:"column",alignItems:"center"}} >
           <div style={{ textAlign: "center", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <span style={{ fontSize: "20px" }}>{basketelem.length}</span>
             <h2 style={{ display: "inline-block" }}>:تعداد محصول در سبد</h2>
           </div>
 
-          <div className="buys">
+          <div className="buys" >
             {basketelem.map((u) => (
               <Basketitem key={u.number} item={u}  />
             ))}

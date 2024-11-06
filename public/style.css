@@ -206,7 +206,7 @@ Footer
   */
   #sidebar{
     width: 300px;
-    height: 800px;
+    height: 100%;
     position: fixed;
     right: 0px;
     top: 0px;
@@ -366,14 +366,15 @@ products
 */
 #sorting{
   position: absolute;
-  top: 30px;
-  left: 85px;
+  top: 3%;
+  left:7%;
   width: 100px;
   height: 30px;
   font-size: 15px;
   border: 2px solid rgb(161, 155, 155);
   border-radius: 4px;
 }
+
 
 
 #productscontainer{
@@ -404,12 +405,12 @@ Basket
 
 #listkharid{
   display: flex;
-  width: 900px;
+  width: 100%;
   height: 150px;
   border: 3px solid rgb(161, 155, 155);
   border-radius: 10px;
   margin-bottom: 50px;
-  background-color:  rgb(0, 255, 136);
+  background-color:   rgb(0, 255, 136);
 
   align-items: center;
   justify-content: center;
@@ -433,12 +434,13 @@ Basketitems
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 90%;
 }
 #pricecontaners{
   display: flex;
   flex-direction: column;
   background-color:  rgb(0, 255, 136);
-  width: 900px;
+  width: 100%;
   border: 3px solid rgb(161, 155, 155);
   margin-bottom: 50px;
   align-items: center;
@@ -611,7 +613,6 @@ Login
   }
   #login{
     display: flex;
-    align-items: center;
     justify-content: center;
     margin-bottom: 40px;
     
@@ -1095,4 +1096,88 @@ comment
 }
 .commenttitle{
   font-size: 20px;
+}
+
+
+
+
+
+
+@media screen and  (max-width: 800px){
+  #srech-sidebaricon{
+    display: none;
+  }
+  #sending{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+  }
+  #boxprice{
+    width: 100%;
+  
+  }
+  #boxaddress{
+    width: 100%;
+    margin: 0px;
+  }
+
+  #processsending{
+    width: 100%;
+    margin: 0px;
+    margin-top: 30px;
+
+  }
+  
+ #sendingcontainer{
+  margin: 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+ }
+  
+}
+
+#basketbakhsh2{
+  width: 20% ;
+  direction: rtl; 
+}
+#basketbakhsh3{
+ width: 35% ; 
+ direction: rtl; 
+
+}
+
+#basketbakhsh4{
+  width: 25% ; 
+}
+#basketbakhsh41{
+  width: 8% ; 
+}
+#faTrash1{
+  margin-left: 10px;
+  padding-left: 30px;
+ }
+
+
+
+@media screen and  (max-width: 830px){
+
+  #basketbakhsh1{
+    display: none;
+  }
+  #basketbakhsh2{
+    width: 25% ; 
+ }
+  #basketbakhsh3{
+   width: 35% ; 
+
+  }
+
+  #basketbakhsh4{
+    width: 40% ; 
+  }
+  #faTrash1{
+   margin-left: 10px;
+   padding-left: 10px;
+  }
 }
